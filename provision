@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+cwd=$(pwd)
+cd $HOME/.chef
+
+# Fetch latest version
+git fetch
+git checkout -t origin/master
+
+# Install cookbooks
+librarian-chef install
+
+# Run Chef client
+sudo chef-client -N local -z
+
+cd $cwd

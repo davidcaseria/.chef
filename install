@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+cwd=$(pwd)
+
+# Install dependencies
+sudo apt-get -y install curl git ruby-full
+
+# Install Chef
+curl -L https://www.chef.io/chef/install.sh | sudo bash
+
+# Install librarian-chef
+cd $HOME/.chef
+sudo gem install librarian-chef
+
+# Initialize git repository
+git init
+git remote add origin https://github.com/davidcaseria/.chef.git
+
+cd $cwd

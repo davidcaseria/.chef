@@ -15,4 +15,8 @@ sudo gem install librarian-chef
 git init
 git remote add origin https://github.com/davidcaseria/.chef.git
 
+# Swtich to zsh
+# TODO Try to get this into Chef
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 cd $cwd

@@ -2,14 +2,13 @@
 cwd=$(pwd)
 cd $HOME/.chef
 
-# Fetch latest version
-git fetch
-git checkout -t origin/master
+# Pull latest version
+git pull origin master
 
 # Install cookbooks
 librarian-chef install
 
 # Run Chef client
-sudo chef-client -N local -z
+sudo chef-client -z
 
 cd $cwd

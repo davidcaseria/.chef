@@ -2,6 +2,6 @@
   "name": "developer",
   "run_list": [
     "recipe[vim]",
-    "recipe[oh-my-zsh]"
+    "recipe[vim-solarized]"
   ]
 }

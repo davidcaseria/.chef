@@ -2,5 +2,8 @@
 
 site 'https://supermarket.getchef.com/api/v1'
 
-cookbook 'oh-my-zsh', '~> 0.4.3'
+# Community cookbooks
 cookbook 'vim', '~> 2.0.0'
+
+# Custom cookbooks
+cookbook 'vim-solarized', path: 'custom/cookbooks/vim-solarized'

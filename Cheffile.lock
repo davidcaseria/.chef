@@ -4,11 +4,17 @@ SITE
     vim (2.0.0)
 
 PATH
-  remote: custom/cookbooks/vim-solarized
+  remote: custom/cookbooks/dotfiles
   specs:
-    vim-solarized (0.1.0)
+    dotfiles (0.1.0)
+
+PATH
+  remote: custom/cookbooks/ubuntu
+  specs:
+    ubuntu (0.1.0)
 
 DEPENDENCIES
+  dotfiles (>= 0)
+  ubuntu (>= 0)
   vim (~> 2.0.0)
-  vim-solarized (>= 0)
 

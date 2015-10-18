@@ -9,6 +9,6 @@ git pull origin master
 librarian-chef install
 
 # Run Chef client
-sudo chef-client -z
+echo "{\"user\":\"$USER\"}" | sudo chef-client -z -j /dev/stdin
 
 cd $cwd

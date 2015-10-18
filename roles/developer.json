@@ -2,6 +2,7 @@
   "name": "developer",
   "run_list": [
     "recipe[vim]",
-    "recipe[vim-solarized]"
+    "recipe[ubuntu]",
+    "recipe[dotfiles]"
   ]
 }

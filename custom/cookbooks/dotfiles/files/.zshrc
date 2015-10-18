@@ -49,7 +49,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aws brew common-aliases git git-flow github gradle gulp httpie knife node npm osx redis-cli sbt scala spring sublime sudo supervisor web-search)
+plugins=(aws brew git git-flow github gradle gulp httpie knife node npm sbt scala spring sublime sudo supervisor web-search)
 
 # User configuration
 

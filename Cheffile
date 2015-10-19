@@ -3,6 +3,7 @@
 site 'https://supermarket.getchef.com/api/v1'
 
 # Community cookbooks
+cookbook 'supervisor', '~> 0.4.12'
 cookbook 'vim', '~> 2.0.0'
 
 # Custom cookbooks

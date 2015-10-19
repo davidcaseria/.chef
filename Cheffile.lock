@@ -1,7 +1,16 @@
 SITE
   remote: https://supermarket.getchef.com/api/v1
   specs:
+    build-essential (2.2.4)
+    python (1.4.6)
+      build-essential (>= 0.0.0)
+      yum-epel (>= 0.0.0)
+    supervisor (0.4.12)
+      python (>= 0.0.0)
     vim (2.0.0)
+    yum (3.8.1)
+    yum-epel (0.6.3)
+      yum (~> 3.2)
 
 PATH
   remote: custom/cookbooks/dotfiles
@@ -15,6 +24,7 @@ PATH
 
 DEPENDENCIES
   dotfiles (>= 0)
+  supervisor (~> 0.4.12)
   ubuntu (>= 0)
   vim (~> 2.0.0)
 

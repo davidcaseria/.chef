@@ -8,5 +8,11 @@
 if node[:platform] == 'ubuntu'
   apt_package 'compizconfig-settings-manager'
   apt_package 'compiz-plugins-extra'
-  apt_package 'guake'
+  apt_package 'chromium-browser'
+  apt_package 'keepassx'
+  apt_package 'konsole'
+  apt_package 'kpcli'
+  apt_package 'supervisor'
+
+  include_recipe 'ubuntu::syncthing'
 end

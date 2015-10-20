@@ -1,8 +1,13 @@
 {
   "name": "developer",
+  "override_attributes": {
+    "java": {
+      "jdk_version": "8"
+    }
+  },
   "run_list": [
-    "recipe[vim]",
-    "recipe[ubuntu]",
-    "recipe[dotfiles]"
+    "recipe[dotfiles]",
+    "recipe[java]",
+    "recipe[postgresql]"
   ]
 }

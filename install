@@ -2,7 +2,11 @@
 cwd=$(pwd)
 
 # Install dependencies
-sudo apt-get -y install curl git ruby-full
+if [ $(uname -s) == "Linux" ]; then
+  sudo apt-get -y install curl git ruby-full
+else
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
 # Install Chef
 curl -L https://www.chef.io/chef/install.sh | sudo bash
@@ -17,6 +21,6 @@ git remote add origin https://github.com/davidcaseria/.chef.git
 
 # Swtich to zsh
 # TODO Try to get this into Chef
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 cd $cwd

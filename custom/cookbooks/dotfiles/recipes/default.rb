@@ -10,17 +10,17 @@ if node.attribute?('user')
   user = node[:user]
   home = Dir.home(user)
 
-  # Get the current cookbook context
-  cb = run_context.cookbook_collection[cookbook_name]
+  git "clone_dotfiles" do
+    repository "https://github.com/davidcaseria/dotfiles.git"
+    destination "#{home}/.dotfiles"
+    user user
+    group (node['platform'] == 'ubuntu' ? user : 'staff')
+  end
 
-  # Copy files to home directory
-  cb.manifest['files'].each do |file|
-    path = file[:path][6..-1]
-    cookbook_file "#{home}/#{path}" do
-      source path
-      owner user
-      group user
-      action :create
-    end
+  execute "bootstrap_dotfiles" do
+    command "./bootstrap.sh"
+    environment ({'HOME' => home})
+    cwd "#{home}/.dotfiles"
+    user user
   end
 end

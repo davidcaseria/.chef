@@ -7,7 +7,6 @@
   },
   "run_list": [
     "recipe[dotfiles]",
-    "recipe[java]",
-    "recipe[postgresql]"
+    "recipe[java]"
   ]
 }

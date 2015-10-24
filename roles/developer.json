@@ -11,7 +11,6 @@
   "run_list": [
     "recipe[dotfiles]",
     "recipe[java]",
-    "recipe[nodejs]",
-    "recipe[scala]"
+    "recipe[nodejs]"
   ]
 }

@@ -14,5 +14,6 @@ if node[:platform] == 'ubuntu'
   apt_package 'kpcli'
   apt_package 'supervisor'
 
+  include_recipe 'ubuntu::scala'
   include_recipe 'ubuntu::syncthing'
 end

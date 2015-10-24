@@ -21,4 +21,6 @@ if node[:platform] == 'mac_os_x'
   homebrew_package 'neo4j'
   homebrew_package 'pgcli'
   homebrew_package 'redis'
+  homebrew_package 'sbt'
+  homebrew_package 'scala'
 end

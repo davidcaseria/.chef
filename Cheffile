@@ -5,7 +5,9 @@ site 'https://supermarket.getchef.com/api/v1'
 # Community cookbooks
 cookbook 'java', '~> 1.35.0'
 cookbook 'homebrew', '~> 1.13.0'
+cookbook 'nodejs', '~> 2.4.2'
 cookbook 'postgresql', '~> 3.4.20'
+cookbook 'scala', '~> 2.1.0'
 cookbook 'supervisor', '~> 0.4.12'
 cookbook 'vim', '~> 2.0.0'
 

@@ -3,10 +3,15 @@
   "override_attributes": {
     "java": {
       "jdk_version": "8"
+    },
+    "nodejs": {
+      "engine": "node"
     }
   },
   "run_list": [
     "recipe[dotfiles]",
-    "recipe[java]"
+    "recipe[java]",
+    "recipe[nodejs]",
+    "recipe[scala]"
   ]
 }
